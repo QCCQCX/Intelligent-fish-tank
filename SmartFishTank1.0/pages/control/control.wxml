@@ -1,0 +1,69 @@
+<view class="title">智能控制</view>
+
+
+    <view class="amount"> 
+        <view class="LED_text">自动换水</view>
+    </view>
+
+    <button class="button_led" data-type="water_open" bindtap="controlFunction">开始换水</button>
+
+    <view class="hr"></view>
+
+    <view class="amount"> 
+        <view class="EAT_text">饲料自动投喂开关</view>
+        <switch style='zoom:.6;' class="switch_EAT" bindchange="switchChange_EAT"></switch>
+    </view>
+
+    <view wx:if="{{!eat_switch}}">
+        <view class="amount">
+            <button class="button_led" data-type="eat_open" bindtap="controlFunction">开始投喂</button>
+            <button class="button_led" data-type="eat_close" bindtap="controlFunction">停止投喂</button>
+        </view>
+    </view>
+
+    <view wx:else class="amount">
+        <view class="section">
+        <view class="section_title">自动投喂已执行!</view>
+            <picker class="pickers" bindchange="bindPickerChange_1" value="{{index_1}}" range="{{array}}">
+                <view class="picker">点击调整投喂间隔：{{array[index_1]}}</view>
+            </picker>
+        </view>
+    </view>
+
+    <view class="hr"></view>
+
+    <view class="amount"> 
+        <view class="O2_text">氧气自动投入开关</view>
+        <switch style='zoom:.6;' class="switch_O2" bindchange="switchChange_O2"></switch>
+    </view>
+
+    <view wx:if="{{!o2_switch}}">
+        <view class="amount">
+            <button class="button_led" data-type="o2_open" bindtap="controlFunction">开始打氧</button>
+            <button class="button_led" data-type="o2_close" bindtap="controlFunction">停止打氧</button>
+        </view>
+    </view>
+
+    <view wx:else class="amount">
+        <view class="section">
+            <view class="section_title">自动打氧已执行!</view>
+            <picker class="pickers" bindchange="bindPickerChange_2" value="{{index_2}}" range="{{array}}">
+                <view class="picker">点击调整打氧间隔：{{array[index_2]}}</view>
+            </picker>
+        </view>
+    </view>
+
+    <view class="hr"></view>
+
+    <view class="amount"> 
+        <view class="TEMP_text">最低温设置</view>
+    </view>
+
+    <view class="amount"> 
+        <view class="section">
+            <picker class="pickers" bindchange="bindPickerChange_3" value="{{index_3}}" range="{{array_temp}}">
+                <view class="picker">点击调整最低温：{{array_temp[index_3]}}</view>
+            </picker>
+        </view>
+    </view>
+

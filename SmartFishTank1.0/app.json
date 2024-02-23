@@ -1,0 +1,53 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/history_1/history_1",
+    "pages/history_2/history_2",
+    "pages/control/control",
+    "pages/login/login"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+
+  "tabBar": {
+    "color": "#7a7a7a",
+    "selectedColor": "#007aff",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+          {
+              "pagePath": "pages/index/index",
+              "iconPath": "pages/pic/begin.png",
+              "selectedIconPath": "pages/pic/begin_.png",
+              "text": "开始"
+              
+          }, 
+          {
+            "pagePath": "pages/control/control",
+            "iconPath": "pages/pic/control.png",
+            "selectedIconPath": "pages/pic/control_.png", 
+            "text": "控制"
+         },
+          {
+            "pagePath": "pages/history_1/history_1",
+            "iconPath": "pages/pic/eat.png",
+            "selectedIconPath": "pages/pic/eat_.png", 
+            "text": "投喂记录"
+        }, 
+        {
+          "pagePath": "pages/history_2/history_2",
+          "iconPath": "pages/pic/O2.png",
+          "selectedIconPath": "pages/pic/O2_.png", 
+          "text": "打氧记录"
+       }
+    ]
+ }
+}

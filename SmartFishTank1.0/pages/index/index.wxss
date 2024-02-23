@@ -1,0 +1,65 @@
+/**index.wxss**/
+.text{
+    padding-top: 10px;
+    text-align: center;
+    font-weight: 10;
+    font-size: 10px;
+    font-style: italic;
+    color:black;
+}
+.hide{
+    display: none;
+}
+.touxiang {
+    width: 110rpx;
+    height: 110rpx;
+    border-radius: 50%;
+    margin-top: 50rpx;
+    margin-left: 4%;
+}
+.nicheng{
+    color:#000000;
+}
+.button_0{
+    margin-top: 295rpx;
+    text-align: center;
+}
+.tapimg_login{
+    width: 450rpx;
+} 
+.button_1{
+    margin-top: 5px;
+    text-align: center;
+}
+.tapimg_nologin{
+    width: 450rpx;
+}
+.u-wrp-bnr {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 700rpx;
+    height: 350rpx;
+    display: block;
+    position: relative;
+    background: #f0f0f0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.u-img-slide {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 780rpx;
+    height: inherit;
+}
+.text_status{
+    margin-top: 20rpx;
+    margin-left: 5%;
+    font-size: small;
+}
+.button_2{
+    margin-top: 40rpx;
+    width: 455rpx;
+    height: 90rpx;
+}

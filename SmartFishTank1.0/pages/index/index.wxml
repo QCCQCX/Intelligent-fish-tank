@@ -1,0 +1,51 @@
+<!--index.wxml-->
+<swiper class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true'>
+  <block wx:for="{{bnrUrl}}" wx:for-index="index">
+    <swiper-item>
+      <image src='{{item.url}}' class='u-img-slide' ></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="button_0" wx:if="{{!userInfo}}">    
+    <button class="tapimg_login" type="primary" bindtap="go">登录</button>
+ </view>
+
+<view wx:else class="root">
+    <image class="touxiang" src="{{userInfo.avatarUrl}}"></image>
+    <text class="nicheng"> 欢迎：{{userInfo.username}}\n</text>
+    <view class="text_status">
+        <text  class="LED_text">换水状态：</text>
+        <text wx:if="{{WATER == 1}}">
+            <text>正在换水\n</text>
+        </text>
+        <text wx:else>
+            <text>未进行换水\n</text>
+        </text>
+        <text  class="TEMP_text">实时温度：{{TEMP}} ℃\n</text>
+        <text  class="LED_text">投喂状态：</text>
+        <text wx:if="{{EAT == 1}}">
+            <text>正在投喂\n</text>
+        </text>
+        <text wx:else>
+            <text>未进行投喂\n</text>
+        </text>
+        <text  class="LED_text">打氧状态：</text>
+        <text wx:if="{{O2 == 1}}">
+            <text>正在打氧\n</text>
+        </text>
+        <text wx:else>
+            <text>未进行打氧\n</text>
+        </text>
+        <text  class="EAT_text">最近手动投喂：{{EAT_TIME}}\n</text>
+        <text  class="O2_text">最近手动打氧：{{O2_TIME}}</text>
+    </view>
+    <button class="button_2" type="primary" bindtap="fresh_status">更新状态</button>
+</view>
+
+<!--退出登录-->
+<view class="button_1" wx:if="{{userInfo}}">  
+  <button class="tapimg_nologin" type="warn" bindtap="nologin">退出登录</button>
+</view>
+
+<view class="text" >    @qcx  </view>
